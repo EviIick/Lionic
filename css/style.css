@@ -66,6 +66,11 @@ html{
     border-radius: 4px;
     cursor: pointer;
     display: inline-block;
+    transition: background-color .3s ease;
+}
+
+.btn:hover{
+    background-color: blue;
 }
 
 .btn.btn-big{
@@ -116,6 +121,11 @@ html{
 
 .nav-link{
     color: #1c1c1c;
+    transition: color .3s ease;
+}
+
+.nav-link:hover{
+    color:#3172b9;
 }
 
 .nav-item.is-active .nav-link{
@@ -130,11 +140,6 @@ html{
     margin-left: 40px;
 }
 
-.header-btn:hover {
-	background: #d3d3d3;
-	color: #787878;
-    border-color: #d3d3d3;
-}
 /*Hero*/
 .section-hero{
     background: url('../img/Base.png') right center no-repeat white;
@@ -222,19 +227,38 @@ html{
     padding: 60px 30px;
     outline: 1px solid #e4e4e4;
     border-radius: 5px;
+    transition-property: background-color, color;
+    transition-duration: .3s;
+    transition-timing-function: ease;
 }
 
 .section-do-item:not(:last-child){
     margin-right: 30px;
 }
 
+.section-do-item:hover{
+    background-color: #3172b9;
+    color: white;
+    cursor: pointer;
+}
+
+.section-do-item:hover .section-do-item-description{
+    color: white;
+}
 .section-do-item-heading{
     margin-top: 20px;
     margin-bottom: 18px;
     font-style: 20px;
     line-height: 1;
     font-weight: 600;
-    color: #1c1c1c;
+}
+
+.section-do-icon path{
+    transition: fill .3s ease;
+}
+
+.section-do-item:hover .section-do-icon path {
+    fill: white;
 }
 
 .section-do-item-description{
@@ -244,6 +268,7 @@ html{
     line-height: 21px;
     font-weight: 300;
     color:#787878;
+    transition: color .3s ease;
 }
 
 /*Clients*/
@@ -374,6 +399,12 @@ html{
 }
 
 /*Form*/
+.section-form{
+    padding-top: 85px;
+    padding-bottom: 95px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
 .form-title{
     text-align: center;
 }
@@ -410,7 +441,7 @@ html{
 /*Footer*/
 .footer{
     height: 125px;
-}
+    }
 
 .footer-container{
     display: flex;
