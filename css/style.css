@@ -520,3 +520,7 @@ html{
     width: 24px;
     height: 17px;
 }
+
+body{
+    min-width: 1200px;
+}
